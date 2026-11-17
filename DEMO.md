@@ -36,7 +36,7 @@ python -m pytest -q
 python -m pytest -q -m student -o addopts=
 ```
 
-Đúng: cổng host `160 passed` (có 47 test bonus), ma trận student `248 passed`.
+Đúng: cổng host `184 passed` (gồm 47 test bonus), ma trận student `248 passed`.
 **Nói:** "Cổng host kiểm phần có sẵn: policy, ledger, idempotency, crash. Ma trận student là T01–T14 chạy trên cả 4 shape, mỗi shape 62 test. Swarm 'pass' ở đây nghĩa là nó fail đúng chỗ dự kiến (seed 55)."
 
 Lọc từng shape:

@@ -18,7 +18,7 @@ Phần này nối tiếp phần mini research ở buổi lý thuyết (slide 62�
 | Field | Hướng dẫn | Nhóm điền |
 | --- | --- | --- |
 | CÂU | R1 / R2 / R3 / R4 | R2 |
-| SOURCE | Paper/blog, năm, URL, loại bằng chứng (benchmark, production report, blog kinh nghiệm) | MAST, NeurIPS 2025, *Why Do Multi-Agent LLM Systems Fail?* (loại bằng chứng: benchmark kèm phân tích có người gán nhãn). Bổ trợ cho thành phần verifier: Google Research 2026, *Towards a Science of Scaling Agent Systems*. URL: lấy theo thư viện tham khảo slide 68–69 |
+| SOURCE | Paper/blog, năm, URL, loại bằng chứng (benchmark, production report, blog kinh nghiệm) | MAST, NeurIPS 2025, *Why Do Multi-Agent LLM Systems Fail?* (loại bằng chứng: benchmark kèm phân tích có người gán nhãn). Bổ trợ cho thành phần verifier: Google Research 2026, *Towards a Science of Scaling Agent Systems*. URL: https://arxiv.org/abs/2503.13657 (MAST); https://arxiv.org/abs/2512.08296 (Google Research) |
 | CLAIM | Một kết luận gốc của nguồn. Không viết rộng hơn phạm vi paper | Lỗi của hệ multi-agent chia thành 3 nhóm: system design, inter-agent misalignment, task verification (14 failure mode, κ = 0,88). |
 | BOUNDARY | Model / dataset / setup giới hạn kết luận đó | Taxonomy xây từ trace của các framework MAS với model thật và task khác (không phải claims hoàn tiền). Trên LogiX chỉ có MockLLM, host chặn approval, trần theo đơn và idempotency, và chỉ có một nguồn lỗi. |
 | HYPOTHESIS | Nếu đổi shape A→B (hoặc bật/tắt một thành phần), metric X sẽ đổi theo hướng nào, khoảng bao nhiêu | Lỗi seed 55 của swarm là lỗi **task verification**: không ai kiểm số ngày trễ với DB trước khi ghi. Bật thêm một bước verifier bằng code thì pass rate lên 1.000, pass^5 lên 1.000, variance về 0, và cost/success tăng không quá 20%. |

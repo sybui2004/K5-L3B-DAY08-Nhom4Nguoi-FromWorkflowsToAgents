@@ -4,7 +4,7 @@
 
 - Họ tên: Hoàng Ngọc Hiệu
 - MSSV: 2A202603976
-- Email: hoangngochieu10012000@gmail.com
+- Email: 
 - GitHub: [hoangngochieu10012000](https://github.com/hoangngochieu10012000)
 
 ## 2. Phần việc phụ trách
