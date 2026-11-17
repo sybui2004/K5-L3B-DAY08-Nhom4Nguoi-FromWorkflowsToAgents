@@ -74,5 +74,4 @@ Cost/success của `swarm_verified` là 57.57 trên bộ public, so với 28.86 
 
 - Làm tốt: số liệu trong báo cáo tái lập được bằng lệnh, có kiểm trace sạch cho cả ba shape, có crash suite 20/20.
 - Hạn chế: test trace chỉ chạy trên ba shape của nhóm, không chạy trên swarm. MockLLM chỉ có một nguồn lỗi nên không đo được tỉ lệ khuếch đại lỗi như paper, và latency là `unavailable`.
-- Lưu ý: PR #5 cũng chứa `single.py`, `test_shape_single.py` và `showcase/` có nội dung giống nhánh `feature/single-agent-shape` của Hoàng Ngọc Hiệu. Phần đó là công của Hiệu, không tính vào đóng góp của tôi.
 - Cần làm thêm: điền Email, và chạy `python -m lab8.check_submission` sau khi các PR đã merge.
