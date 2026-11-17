@@ -3,16 +3,18 @@
 ## Thông tin nhóm
 
 - Tên nhóm:
-- Lớp: L3A
-- Repo nhóm: `K5-L3A-DAY08-TenNhom-FromWorkflowsToAgents` (xem [SUBMISSION.md](SUBMISSION.md))
+- Lớp: L3B
+- Repo nhóm: `K5-L3B-DAY08-TenNhom-FromWorkflowsToAgents` (xem [SUBMISSION.md](SUBMISSION.md))
 - URL repo, nhánh nộp, commit chốt:
 
 ## Thành viên
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |        |      |       |        |         |
-|   2 |        |      |       |        |         |
+|   1 | Bùi Thái Sỹ | 2A202604002 | | | |
+|   2 | Bùi Phan Thanh Phúc | 2A202603981 | | | |
+|   3 | Hoàng Ngọc Hiệu | 2A202603976 | | | |
+|   4 | Đoàn Sỹ Hưng | 2A202603990 | | | |
 
 Gợi ý chia vai:
 

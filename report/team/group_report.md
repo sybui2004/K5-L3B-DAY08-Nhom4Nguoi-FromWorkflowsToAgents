@@ -5,7 +5,11 @@ Tối đa 5 trang ngoài phụ lục. Số liệu lấy từ file trong `src/rep
 ## 1. Thông tin nhóm
 
 - Tên nhóm:
-- Thành viên: xem `TEAM.md`
+- Thành viên (chi tiết xem `TEAM.md`):
+  - Bùi Thái Sỹ, 2A202604002
+  - Bùi Phan Thanh Phúc, 2A202603981
+  - Hoàng Ngọc Hiệu, 2A202603976
+  - Đoàn Sỹ Hưng, 2A202603990
 - Commit chốt (trùng `report/team/decision_adr.md`):
 
 ## 2. Mục tiêu và cách tiếp cận
