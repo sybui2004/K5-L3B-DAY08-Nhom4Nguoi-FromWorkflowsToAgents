@@ -77,3 +77,46 @@ Sao chép mục dưới đây cho từng thành viên.
 - Commit `c839ece` (workflow), `8c1974e` (test).
 - `src/tests/test_shape_workflow.py` (31 passed).
 - Báo cáo cá nhân: `report/team/2A202603981_BuiPhanThanhPhuc.md`.
+
+## 2A202603976_HoangNgocHieu
+
+### Phần việc phụ trách
+
+- Shape single agent ReAct (`src/lab8/shapes/single.py`).
+- Test single agent (`src/tests/test_shape_single.py`).
+- Ứng dụng showcase Streamlit (`showcase/app.py`, `showcase/catalog/`, `showcase/services/`, `showcase/ui/`, `showcase/views/`).
+- Tích hợp nhánh `feature/single-agent-shape` vào `main` (PR #6).
+
+### Đóng góp cụ thể
+
+- Single agent: ReAct tối đa 8 bước, agent chỉ chọn tool đọc; shape giữ trạng thái claim, order, quote giữa các lượt, dừng `needs_info` nếu thiếu `order_id`, lấy số tiền từ `compute_compensation` thay vì lời agent hoặc nội dung ticket, rồi gọi `issue_refund` với quote đầy đủ để host kiểm tra; ghi trace và chuyển tiếp crash được tiêm.
+- Test bổ sung: giới hạn số bước và quyền chỉ đọc, hạch toán số lần gọi model, claim thiếu `order_id` dừng trước khi tra cứu order.
+- Showcase: chạy ticket, so sánh các shape, xem bảo mật và trace, thử crash/retry, xem benchmark.
+
+### Bằng chứng
+
+- Commit `a68db94` (single agent + showcase).
+- `src/tests/test_shape_single.py` (3 passed).
+- Báo cáo cá nhân: `report/team/2A202603976_HoangNgocHieu.md`.
+
+## 2A202603990_DoanSyHung
+
+### Phần việc phụ trách
+
+- Test an toàn trace cho các shape của nhóm (`src/tests/test_shape_trace_safety.py`).
+- Chạy benchmark công khai và crash suite, sinh `src/reports/benchmark.json`, `src/reports/crash.json`.
+- Đo đạc bonus B3 (`src/bonus/verifier_stats.py`, `src/reports/bonus_*.json`, `report/team/bonus_report.md`).
+- Slide và tài liệu demo (`showcase/slides/`, `DEMO.md`, `RUN_DEMO.md`).
+- Tích hợp nhánh `feature/evaluation-and-reports` vào `main` (PR #5).
+
+### Đóng góp cụ thể
+
+- Test trace: với mỗi claim public và mỗi shape (workflow, single, orchestrator), trace phải thuộc đúng lần chạy (`run_id` khớp), không chứa `CANARY_SECRET_*`, chuỗi cấm hay nguyên văn ticket; claim không tồn tại vẫn có trace; trace thiếu, cũ hoặc sai định dạng bị fail-closed.
+- Báo cáo sinh bằng lệnh: benchmark 4 shape × 5 seed, crash suite, thống kê verifier và benchmark B3 (swarm so với swarm_verified so với workflow).
+- Slide và hướng dẫn chạy demo.
+
+### Bằng chứng
+
+- Commit `01ca29e` (slide, demo), `291725c` (test trace), `b824ba1` (benchmark, crash), `b2550dc` (bonus B3).
+- `src/tests/test_shape_trace_safety.py` (45 passed).
+- Báo cáo cá nhân: `report/team/2A202603990_DoanSyHung.md`.
