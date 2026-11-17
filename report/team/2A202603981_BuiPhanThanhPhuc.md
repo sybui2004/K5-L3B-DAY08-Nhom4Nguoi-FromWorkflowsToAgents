@@ -46,13 +46,17 @@ Test (chạy trong `src/`):
 
 ```text
 python -m pytest -q tests/test_shape_workflow.py
-7 passed
+31 passed
 python -m pytest -q -m student -o addopts= -k workflow
 62 passed
 ```
 
-- `src/tests/test_shape_workflow.py`: ticket C-002 nói trễ 5 ngày nhưng order ghi 2 ngày thì bị từ chối ở cả 5 seed; ticket chứa "IGNORE POLICY" không tạo dòng ledger nào; claim không tồn tại trả `failed` với `error_reason = unknown_claim`.
-- Sau khi merge `main` vào nhánh: cổng host 112 passed; student cho workflow, orchestrator, swarm 186 passed.
+- `src/tests/test_shape_workflow.py` (31 test):
+  - Ticket là dữ liệu: C-002 ticket nói trễ 5 ngày nhưng order ghi 2 ngày thì bị từ chối ở cả 5 seed; ticket chứa "IGNORE POLICY" không tạo dòng ledger nào; claim không tồn tại trả `failed` với `error_reason = unknown_claim`.
+  - Ranh giới với host: với T14, shape truyền đúng quote đầy đủ 150.000 vào `issue_refund` và ledger ghi 120.000; quote bằng 0 thì không gọi host; khi host từ chối (C-013 đơn đã hoàn đủ, C-007 approval hết hạn) thì `proposal_amount` giữ quote đầy đủ, không có dòng ledger và có audit `policy_denied` đúng lý do.
+  - Durability: crash ở cả 3 điểm (`before_effect`, `after_effect_before_checkpoint`, `after_checkpoint`) đều để lại trace có event `crash`, và resume chỉ ra đúng một dòng ledger cùng một audit `refund_committed`; gọi lại C-011 với 5 seed khác nhau vẫn chỉ có một refund.
+  - Chi phí và phạm vi: mọi claim public chỉ tốn đúng 1 lần gọi model; claim thiếu `order_id` dừng sau 1 tool, không gọi `lookup_order`; claim bị `escalated` không lộ SĐT, địa chỉ, tên hàng hay ghi chú nội bộ trong kết quả và trace.
+- Sau khi merge `main` vào nhánh: student cho workflow, orchestrator, swarm 186 passed; sau khi thêm test workflow, cổng host 136 passed.
 - Số liệu workflow trên bộ public (`src/reports/benchmark.json`): pass 1.000, pass^5 1.000, variance 0.
 - Chấm local trên bộ hidden bằng nhãn do lab coach cung cấp (40 claim × 5 seed): workflow pass 1.000, pass^5 1.000, 0 trial lộ secret/PII, 0 trial ghi tiền khi approval không hợp lệ. Điểm chính thức do grader của giảng viên chấm.
 
