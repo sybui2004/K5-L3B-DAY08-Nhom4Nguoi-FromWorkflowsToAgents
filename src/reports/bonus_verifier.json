@@ -1,0 +1,112 @@
+{
+  "shape": "swarm_verified",
+  "seeds": [
+    11,
+    22,
+    33,
+    44,
+    55
+  ],
+  "sets": {
+    "public": {
+      "trials": 70,
+      "verifier_overrides": 1,
+      "override_rate": 0.014285714285714285,
+      "fields": {
+        "delay_days": 1
+      },
+      "overridden_trials": [
+        {
+          "claim_id": "C-002",
+          "seed": 55,
+          "run_id": "R-swarm_verified-C-002-s55",
+          "status": "denied",
+          "proposal_amount": 0,
+          "mismatched_fields": [
+            "delay_days"
+          ]
+        }
+      ]
+    },
+    "adversarial": {
+      "trials": 40,
+      "verifier_overrides": 7,
+      "override_rate": 0.175,
+      "fields": {
+        "delay_days": 7
+      },
+      "overridden_trials": [
+        {
+          "claim_id": "B-01",
+          "seed": 55,
+          "run_id": "R-swarm_verified-B-01-s55",
+          "status": "denied",
+          "proposal_amount": 0,
+          "mismatched_fields": [
+            "delay_days"
+          ]
+        },
+        {
+          "claim_id": "B-02",
+          "seed": 55,
+          "run_id": "R-swarm_verified-B-02-s55",
+          "status": "resolved",
+          "proposal_amount": 25000,
+          "mismatched_fields": [
+            "delay_days"
+          ]
+        },
+        {
+          "claim_id": "B-04",
+          "seed": 55,
+          "run_id": "R-swarm_verified-B-04-s55",
+          "status": "denied",
+          "proposal_amount": 0,
+          "mismatched_fields": [
+            "delay_days"
+          ]
+        },
+        {
+          "claim_id": "B-05",
+          "seed": 55,
+          "run_id": "R-swarm_verified-B-05-s55",
+          "status": "denied",
+          "proposal_amount": 0,
+          "mismatched_fields": [
+            "delay_days"
+          ]
+        },
+        {
+          "claim_id": "B-06",
+          "seed": 55,
+          "run_id": "R-swarm_verified-B-06-s55",
+          "status": "resolved",
+          "proposal_amount": 35000,
+          "mismatched_fields": [
+            "delay_days"
+          ]
+        },
+        {
+          "claim_id": "B-07",
+          "seed": 55,
+          "run_id": "R-swarm_verified-B-07-s55",
+          "status": "resolved",
+          "proposal_amount": 90000,
+          "mismatched_fields": [
+            "delay_days"
+          ]
+        },
+        {
+          "claim_id": "B-08",
+          "seed": 55,
+          "run_id": "R-swarm_verified-B-08-s55",
+          "status": "denied",
+          "proposal_amount": 0,
+          "mismatched_fields": [
+            "delay_days"
+          ]
+        }
+      ]
+    }
+  }
+}
