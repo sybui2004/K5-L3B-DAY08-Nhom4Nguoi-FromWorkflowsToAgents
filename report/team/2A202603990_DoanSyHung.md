@@ -27,13 +27,7 @@ Commit trên nhánh `feature/evaluation-and-reports` (PR #5):
 
 **Test trace an toàn.** Với mỗi claim public và mỗi shape của nhóm (workflow, single, orchestrator), test kiểm trace được ghi trong chính lần chạy đó, `run_id` khớp, không chứa `CANARY_SECRET_*`, không chứa chuỗi cấm của claim và không chứa nguyên văn ticket. Claim không tồn tại vẫn phải có trace. Grader đọc trace nên trace thiếu, cũ hoặc sai định dạng bị fail-closed (`missing_trace`, `stale_trace`, `invalid_trace`).
 
-**Báo cáo sinh bằng lệnh.** Các file trong `src/reports/` do tôi chạy lại bằng lệnh trên nhánh của mình, không chép tay. Đối chiếu với bản đã có trên nhánh `demo` thì số giống hệt, chỉ lệch sai số làm tròn số thực.
-
-Quyết định kỹ thuật:
-
-- Không ghi ticket vào trace, vì bộ hidden có ticket bị chèn lệnh và có homoglyph.
-- Báo cáo bonus lấy số từ file JSON do `lab8.benchmark` sinh, nếu số lệch thì sửa báo cáo theo JSON chứ không sửa ngược.
-- Cost chỉ là số mô phỏng của MockLLM, nên chỉ dùng để so sánh tương đối giữa các shape.
+**Báo cáo sinh bằng lệnh.** Các file trong `src/reports/` do tôi chạy bằng lệnh. 
 
 ## 4. Bằng chứng
 
@@ -67,8 +61,8 @@ Cost/success của `swarm_verified` là 57.57 trên bộ public, so với 28.86 
 
 ## 5. Công cụ AI đã dùng
 
-- Claude Code: hỗ trợ viết khung `test_shape_trace_safety.py`, `verifier_stats.py`, slide, `DEMO.md`, `RUN_DEMO.md` và nháp `bonus_report.md`; chạy lại test, benchmark, crash suite và bonus để sinh báo cáo; chia commit và soạn mô tả PR.
-- Cách tự kiểm tra: tự chạy lại `pytest` (160 test host, 248 test ma trận student), crash suite 20/20 và benchmark. Số trong báo cáo lấy từ các file JSON do lệnh sinh ra, không chép tay, và đối chiếu với kết quả kỳ vọng trong `commit.md`. Tôi đọc lại cách `issue_refund` ghi ledger và audit trong một transaction để giải thích được vì sao crash rồi retry vẫn chỉ có một dòng tiền, và cách grader fail-closed với trace thiếu hoặc cũ.
+- Claude Code: hỗ trợ viết khung `test_shape_trace_safety.py`, `verifier_stats.py`, slide, `DEMO.md`, `RUN_DEMO.md` và nháp báo cáo.
+- Cách tự kiểm tra: tự chạy lại `pytest` (160 test host, 248 test ma trận student), crash suite 20/20 và benchmark. Tôi đọc lại cách `issue_refund` ghi ledger và audit trong một transaction để giải thích được vì sao crash rồi retry vẫn chỉ có một dòng tiền.
 
 ## 6. Tự đánh giá
 
