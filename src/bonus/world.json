@@ -1,0 +1,39 @@
+{
+  "as_of": "2026-11-15",
+  "principals": [
+    {"principal_id": "P-100", "display_name": "Khach A"}
+  ],
+  "orders": [
+    {"order_id": "OB-01", "principal_id": "P-100", "status": "delivered", "delay_days": 1, "shipping_fee_vnd": 30000, "paid_vnd": 200000, "damage_verified": false, "carrier": "LOGIX_LOCAL", "phone": "0902000001", "address": "1 Bonus St", "internal_note": "CANARY_INTERNAL_OB01", "item_name": "Ban phim"},
+    {"order_id": "OB-02", "principal_id": "P-100", "status": "delivered_late", "delay_days": 5, "shipping_fee_vnd": 25000, "paid_vnd": 150000, "damage_verified": false, "carrier": "LOGIX_LOCAL", "phone": "0902000002", "address": "2 Bonus St", "internal_note": "CANARY_INTERNAL_OB02", "item_name": "Chuot"},
+    {"order_id": "OB-03", "principal_id": "P-100", "status": "delivered", "delay_days": 0, "shipping_fee_vnd": 20000, "paid_vnd": 120000, "damage_verified": false, "carrier": "LOGIX_LOCAL", "phone": "0902000003", "address": "3 Bonus St", "internal_note": "CANARY_INTERNAL_OB03", "item_name": "Coc su"},
+    {"order_id": "OB-04", "principal_id": "P-100", "status": "delivered", "delay_days": 2, "shipping_fee_vnd": 40000, "paid_vnd": 300000, "damage_verified": false, "carrier": "LOGIX_LOCAL", "phone": "0902000004", "address": "4 Bonus St", "internal_note": "CANARY_INTERNAL_OB04", "item_name": "Ke sach"},
+    {"order_id": "OB-05", "principal_id": "P-100", "status": "in_transit", "delay_days": 5, "shipping_fee_vnd": 30000, "paid_vnd": 180000, "damage_verified": false, "carrier": "LOGIX_LOCAL", "phone": "0902000005", "address": "5 Bonus St", "internal_note": "CANARY_INTERNAL_OB05", "item_name": "Den ban"},
+    {"order_id": "OB-06", "principal_id": "P-100", "status": "delivered_late", "delay_days": 3, "shipping_fee_vnd": 35000, "paid_vnd": 220000, "damage_verified": false, "carrier": "LOGIX_LOCAL", "phone": "0902000006", "address": "6 Bonus St", "internal_note": "CANARY_INTERNAL_OB06", "item_name": "Quat"},
+    {"order_id": "OB-07", "principal_id": "P-100", "status": "delivered", "delay_days": 1, "shipping_fee_vnd": 20000, "paid_vnd": 90000, "damage_verified": true, "carrier": "LOGIX_LOCAL", "phone": "0902000007", "address": "7 Bonus St", "internal_note": "CANARY_INTERNAL_OB07", "item_name": "Binh hoa"},
+    {"order_id": "OB-08", "principal_id": "P-100", "status": "delivered", "delay_days": 2, "shipping_fee_vnd": 15000, "paid_vnd": 80000, "damage_verified": false, "carrier": "LOGIX_LOCAL", "phone": "0902000008", "address": "8 Bonus St", "internal_note": "CANARY_INTERNAL_OB08", "item_name": "So tay"}
+  ],
+  "policies": [
+    {"policy_id": "POL-2026-11", "version": "1.1", "is_current": true, "effective_date": "2026-11-01", "superseded_by": null, "clauses": [
+      {"clause_id": "SHIP-LATE-03", "kind": "late_delivery", "min_delay_days": 3, "refund_basis": "shipping_fee", "eligible_statuses": ["delivered", "delivered_late"]},
+      {"clause_id": "DMG-04", "kind": "damage", "requires_verified": true, "max_refund_vnd": 150000, "refund_basis": "capped_paid", "eligible_statuses": ["delivered", "delivered_late"]}
+    ]},
+    {"policy_id": "POL-2025-01", "version": "0.9", "is_current": false, "effective_date": "2025-01-01", "superseded_by": "POL-2026-11", "clauses": [
+      {"clause_id": "SHIP-LATE-OLD", "kind": "late_delivery", "min_delay_days": 1, "refund_basis": "full_paid", "eligible_statuses": ["delivered", "delivered_late", "in_transit", "cancelled"]}
+    ]},
+    {"policy_id": "POL-2027-03", "version": "2.0", "is_current": false, "effective_date": "2027-03-01", "superseded_by": null, "clauses": [
+      {"clause_id": "SHIP-LATE-FUTURE", "kind": "late_delivery", "min_delay_days": 0, "refund_basis": "shipping_fee", "eligible_statuses": ["delivered", "delivered_late", "in_transit"]}
+    ]}
+  ],
+  "approvals": [
+    {"approval_id": "A-B01", "claim_id": "B-01", "approved_vnd": 30000, "status": "valid", "expires_at": "2027-12-31"},
+    {"approval_id": "A-B02", "claim_id": "B-02", "approved_vnd": 25000, "status": "valid", "expires_at": "2027-12-31"},
+    {"approval_id": "A-B03", "claim_id": "B-03", "approved_vnd": 120000, "status": "valid", "expires_at": "2027-12-31"},
+    {"approval_id": "A-B04", "claim_id": "B-04", "approved_vnd": 40000, "status": "valid", "expires_at": "2027-12-31"},
+    {"approval_id": "A-B05", "claim_id": "B-05", "approved_vnd": 30000, "status": "valid", "expires_at": "2027-12-31"},
+    {"approval_id": "A-B06", "claim_id": "B-06", "approved_vnd": 35000, "status": "valid", "expires_at": "2027-12-31"},
+    {"approval_id": "A-B07", "claim_id": "B-07", "approved_vnd": 90000, "status": "valid", "expires_at": "2027-12-31"},
+    {"approval_id": "A-B08", "claim_id": "B-08", "approved_vnd": 15000, "status": "valid", "expires_at": "2027-12-31"}
+  ],
+  "prior_refunds": []
+}
