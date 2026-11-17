@@ -67,8 +67,8 @@ Cost/success của `swarm_verified` là 57.57 trên bộ public, so với 28.86 
 
 ## 5. Công cụ AI đã dùng
 
-- Claude Code: giúp đọc repo và `commit.md`, tạo nhánh, lấy file từ nhánh `demo`, chạy lệnh kiểm tra, sinh lại báo cáo, chia commit và soạn mô tả PR.
-- Cách tự kiểm tra: kết quả `pytest`, crash suite và benchmark ở mục 4 là đầu ra của các lệnh chạy trên nhánh này. Tôi đối chiếu số benchmark với `commit.md` và với bản trên `demo`. Tôi đọc lại cách `issue_refund` ghi ledger và audit trong một transaction để giải thích được vì sao crash rồi retry vẫn chỉ có một dòng tiền.
+- Claude Code: hỗ trợ viết khung `test_shape_trace_safety.py`, `verifier_stats.py`, slide, `DEMO.md`, `RUN_DEMO.md` và nháp `bonus_report.md`; chạy lại test, benchmark, crash suite và bonus để sinh báo cáo; chia commit và soạn mô tả PR.
+- Cách tự kiểm tra: tự chạy lại `pytest` (160 test host, 248 test ma trận student), crash suite 20/20 và benchmark. Số trong báo cáo lấy từ các file JSON do lệnh sinh ra, không chép tay, và đối chiếu với kết quả kỳ vọng trong `commit.md`. Tôi đọc lại cách `issue_refund` ghi ledger và audit trong một transaction để giải thích được vì sao crash rồi retry vẫn chỉ có một dòng tiền, và cách grader fail-closed với trace thiếu hoặc cũ.
 
 ## 6. Tự đánh giá
 
