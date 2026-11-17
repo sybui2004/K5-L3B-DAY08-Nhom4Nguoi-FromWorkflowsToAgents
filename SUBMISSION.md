@@ -7,12 +7,12 @@
 ## Tên repo và biến tên
 
 - `Kn`: số khóa. Khóa này dùng `K5`.
-- Level/lớp: `L3A`.
+- Level/lớp: `L3B`.
 
 ### Repo bài nộp nhóm
 
 ```text
-K5-L3A-DAY08-TenNhom-FromWorkflowsToAgents
+K5-L3B-DAY08-TenNhom-FromWorkflowsToAgents
 ```
 
 `TenNhom` viết không dấu, không khoảng trắng. Repo phải public, hoặc đã mời giảng viên vào.

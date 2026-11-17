@@ -32,7 +32,7 @@ python -m pytest -q
 cd ..
 ```
 
-Đúng: `lab8.smoke pass` và `160 passed`. Nếu hai lệnh này xanh thì demo chạy được.
+Đúng: `lab8.smoke pass` và `184 passed`. Nếu hai lệnh này xanh thì demo chạy được.
 
 ## 4. Chạy demo
 

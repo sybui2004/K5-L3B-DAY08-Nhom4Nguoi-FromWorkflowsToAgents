@@ -4,7 +4,7 @@
 
 - Họ tên: Bùi Phan Thanh Phúc
 - MSSV: 2A202603981
-- Email: thanhphuccrkh@gmail.com
+- Email: 
 - GitHub: https://github.com/Jancaster1234
 
 ## 2. Phần việc phụ trách

@@ -5,15 +5,15 @@
 - Tên nhóm: Nhom4Nguoi
 - Lớp: L3B
 - Repo nhóm: `K5-L3B-DAY08-Nhom4Nguoi-FromWorkflowsToAgents` (xem [SUBMISSION.md](SUBMISSION.md))
-- URL repo, nhánh nộp, commit chốt: https://github.com/sybui2004/K5-L3B-DAY08-Nhom4Nguoi-FromWorkflowsToAgents , main , `<hash chốt, điền sau khi merge>`
+- URL repo, nhánh nộp, commit chốt: https://github.com/sybui2004/K5-L3B-DAY08-Nhom4Nguoi-FromWorkflowsToAgents , main , `aa86e18`
 
 ## Thành viên
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 | Bùi Thái Sỹ | 2A202604002 | symerline2004@gmail.com | https://github.com/sybui2004 | Nhóm trưởng; orchestrator + handoff; bonus B3; tích hợp và báo cáo nhóm |
-|   2 | Bùi Phan Thanh Phúc | 2A202603981 | | https://github.com/Jancaster1234 | Workflow + integration |
-|   3 | Hoàng Ngọc Hiệu | 2A202603976 | | https://github.com/hoangngochieu10012000 | Single agent (ReAct) + showcase |
+|   1 | Bùi Thái Sỹ | 2A202604002 | | https://github.com/sybui2004 | Nhóm trưởng; orchestrator + handoff; bonus B3; tích hợp và báo cáo nhóm |
+|   2 | Bùi Phan Thanh Phúc | 2A202603981 |  | https://github.com/Jancaster1234 | Workflow + integration |
+|   3 | Hoàng Ngọc Hiệu | 2A202603976 |  | https://github.com/hoangngochieu10012000 | Single agent (ReAct) + showcase |
 |   4 | Đoàn Sỹ Hưng | 2A202603990 | | https://github.com/hgmdz1210 | Ledger + evaluation + slide/demo |
 
 - Nhóm 4 người: workflow + integration; single; orchestrator + handoff; ledger + evaluation.
@@ -24,10 +24,10 @@
 
 | Người | Vai | Commit | Test đã thêm hoặc sửa |
 | --- | --- | --- | --- |
-| Bùi Phan Thanh Phúc | Workflow + integration | `<hash feature/workflow-shape>` | `src/tests/test_shape_workflow.py` |
-| Hoàng Ngọc Hiệu | Single agent + showcase | `<hash feature/single-agent-shape>` | `src/tests/test_shape_single.py` |
-| Bùi Thái Sỹ | Orchestrator + handoff + bonus B3 | `<hash feature/orchestrator-and-bonus>` | `src/tests/test_shape_orchestrator.py`, `src/tests/test_bonus_swarm_verified.py` |
-| Đoàn Sỹ Hưng | Ledger + evaluation | `<hash feature/evaluation-and-reports>` | `src/tests/test_shape_trace_safety.py` |
+| Bùi Phan Thanh Phúc | Workflow + integration | `c839ece`, `8c1974e` | `src/tests/test_shape_workflow.py` |
+| Hoàng Ngọc Hiệu | Single agent + showcase | `a68db94` | `src/tests/test_shape_single.py` |
+| Bùi Thái Sỹ | Orchestrator + handoff + bonus B3 | `9547e34`, `ba21183` | `src/tests/test_shape_orchestrator.py`, `src/tests/test_bonus_swarm_verified.py` |
+| Đoàn Sỹ Hưng | Ledger + evaluation | `291725c`, `b824ba1`, `b2550dc` | `src/tests/test_shape_trace_safety.py` |
 
 ## Cá nhân
 

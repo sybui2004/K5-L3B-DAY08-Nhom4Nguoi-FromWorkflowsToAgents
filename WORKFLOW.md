@@ -105,24 +105,23 @@ Không commit: `traces/`, `*.sqlite`, `student_drop/`, `.venv/`, `.env`.
 
 ## 8. Trạng thái hiện tại của repo này
 
+Kiểm trên commit `aa86e18`, trong `src/`.
+
 | Hạng mục | Trạng thái |
 | --- | --- |
-| Ba shape A, B, C | Đã viết, chưa commit (ma trận student 248 passed) |
-| Test cho ba shape | Đã viết (`src/tests/test_shape_*.py`), chưa commit |
-| `crash.json`, `benchmark.json` | Đã sinh |
-| Bonus B3 (swarm có verifier) | Đã xong: `src/bonus/`, `test_bonus_swarm_verified.py`, 3 file `bonus_*.json`, `report/team/bonus_report.md` |
-| Chia commit theo thành viên | Hướng dẫn trong [commit.md](commit.md), chưa commit |
-| `decision_adr.md`, `research_card.md`, `group_report.md`, `TEAM.md`, báo cáo cá nhân | **Chưa điền** |
-| `check_submission` | Còn FAIL ở phần báo cáo / TEAM / ADR |
+| Ba shape A, B, C | Đã viết và đã merge vào `main` (ma trận student 248 passed) |
+| Test cho ba shape | Đã có `src/tests/test_shape_*.py`; cổng host `python -m pytest -q` 184 passed |
+| `crash.json`, `benchmark.json` | Đã sinh; chạy lại cho số liệu trùng (`crash_safety` 20/20) |
+| Bonus B3 (swarm có verifier) | Xong: `src/bonus/`, `test_bonus_swarm_verified.py`, 3 file `bonus_*.json`, `report/team/bonus_report.md` |
+| `decision_adr.md`, `research_card.md`, `group_report.md`, `TEAM.md`, báo cáo cá nhân | Đã điền |
+| `check_submission` | `0 FAIL, 0 WARN` |
 
 ## 9. Việc còn lại, theo thứ tự
 
-1. Quyết định giữ nguyên code AI viết hay đưa về stub để từng thành viên tự code (xem [RULES.md](RULES.md) về dùng AI). Người chấm có thể hỏi từng người về phần mình commit, kể cả bonus.
-2. Điền `TEAM.md`: thông tin nhóm, vai, bảng đóng góp.
-3. Commit theo [commit.md](commit.md): thành viên 1 → 4, rồi 2 commit bonus. Không thêm dòng `Co-Authored-By` (quy tắc cá nhân của bạn).
-4. Chạy lại `pytest -q`, crash test, benchmark trên **code đã commit**; ghi commit hash và run id vào `decision_adr.md`, commit tiếp.
-5. Điền `decision_adr.md` (dòng `- Shape chọn:`), `research_card.md`, `group_report.md`, và mỗi người copy `MSSV_HoTen.md` thành file riêng.
-6. `python -m lab8.check_submission` ra `0 FAIL`, push, và **mỗi thành viên** nộp link repo trên LMS trước deadline.
+1. Mỗi thành viên đọc lại báo cáo cá nhân của mình, kiểm số liệu và phần "Công cụ AI đã dùng" cho đúng thực tế (xem [RULES.md](RULES.md)). Người chấm có thể hỏi từng người về phần mình commit, kể cả bonus.
+2. Điền email còn thiếu trong `TEAM.md` và báo cáo cá nhân.
+3. Commit các thay đổi tài liệu, chạy lại `python -m pytest -q` và `python -m lab8.check_submission`; nếu hash chốt đổi thì cập nhật `decision_adr.md`, `group_report.md`, `TEAM.md`.
+4. Push, và **mỗi thành viên** nộp link repo trên LMS trước deadline.
 
 ## 10. Đọc gì trước
 

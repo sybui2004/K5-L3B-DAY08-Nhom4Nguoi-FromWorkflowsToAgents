@@ -10,7 +10,7 @@ Tối đa 5 trang ngoài phụ lục. Số liệu lấy từ file trong `src/rep
   - Bùi Phan Thanh Phúc, 2A202603981 (workflow)
   - Hoàng Ngọc Hiệu, 2A202603976 (single agent, showcase)
   - Đoàn Sỹ Hưng, 2A202603990 (ledger, evaluation, slide)
-- Commit chốt (trùng `report/team/decision_adr.md`): `<điền bằng git rev-parse --short HEAD sau commit cuối>`
+- Commit chốt (trùng `report/team/decision_adr.md`): `aa86e18`
 
 ## 2. Mục tiêu và cách tiếp cận
 
@@ -50,8 +50,8 @@ Bộ public: 14 claim × 5 seed (11, 22, 33, 44, 55), nguồn `src/reports/bench
 - Crash safety: **20/20** (`src/reports/crash.json`). Sau resume còn đúng một dòng ledger và một audit `refund_committed`.
 - Secret leak / approval bypass: 0 / 0 (mọi trial `ok` theo `lab8.metrics.trial_pass`).
 - Lần fail duy nhất: `R-swarm-C-002-s55` (`status resolved != denied`), do swarm tin số ngày trễ trong ticket ở seed chia hết cho 5.
-- Tự kiểm `student_drop/`: nếu chạy thì ghi vào `src/reports/hidden_selfcheck.json`; chưa đưa vào kết luận ở đây.
-- Test: các test của shape orchestrator và bonus (51 test) đã chạy xanh trong `src/`; toàn bộ `python -m pytest -q` chạy trên nhánh tích hợp sau khi merge.
+- Tự kiểm `student_drop/` (3 shape × 40 claim × 5 seed, `src/reports/hidden_selfcheck.json`): 600 trial, 0 `leak_suspect_trials`, 0 lỗi chạy. File này không có nhãn nên không có pass rate; kết luận chọn shape vẫn dựa trên bộ public.
+- Test (chạy trong `src/` trên commit `aa86e18`): `python -m pytest -q` 184 passed; `python -m pytest -q -m student -o addopts=` 248 passed; `python -m lab8.check_submission` 0 FAIL. Chạy lại benchmark và crash suite cho số liệu trùng file nộp (`crash_safety` 20/20).
 
 **Bonus B3** (`reports/bonus_benchmark_*.json`): verifier đưa swarm từ 0.986 / 0.929 lên 1.000 / 1.000 trên public, và từ 0.875 / 0.375 lên 1.000 / 1.000 trên 8 claim đối kháng. Cost/success tăng 16,1% (49.57 → 57.57) và 6,5% (61.71 → 65.74), nhưng vẫn gấp khoảng 2 lần workflow (28.86).
 
