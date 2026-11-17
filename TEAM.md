@@ -58,3 +58,22 @@ Sao chép mục dưới đây cho từng thành viên.
 
 - `src/tests/test_shape_orchestrator.py`, `src/tests/test_bonus_swarm_verified.py` (51 passed).
 - Báo cáo cá nhân: `report/team/202604002_BuiThaiSy.md`.
+
+## 2A202603981_BuiPhanThanhPhuc
+
+### Phần việc phụ trách
+
+- Shape workflow (`src/lab8/shapes/workflow.py`), shape nhóm chọn để chấm hidden.
+- Test workflow (`src/tests/test_shape_workflow.py`) và tài liệu luồng bài lab `WORKFLOW.md`.
+- Tích hợp nhánh `feature/workflow-shape` vào `main` (PR #2, PR #4).
+
+### Đóng góp cụ thể
+
+- Workflow: các bước Python cố định, quote từ order row qua `compute_compensation`, bỏ qua số ngày trong ticket, truyền quote đầy đủ vào `issue_refund`, chuyển `crash_at` và không bắt `InjectedCrash`; model chỉ soạn lời trả khách.
+- Test bổ sung: quote đầy đủ tới host (T14), host từ chối có audit `policy_denied`, crash ở 3 điểm rồi resume chỉ một refund, đúng 1 model call mỗi claim, `escalated` không lộ PII.
+
+### Bằng chứng
+
+- Commit `c839ece` (workflow), `8c1974e` (test).
+- `src/tests/test_shape_workflow.py` (31 passed).
+- Báo cáo cá nhân: `report/team/2A202603981_BuiPhanThanhPhuc.md`.
